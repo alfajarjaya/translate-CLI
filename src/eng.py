@@ -189,4 +189,4 @@ def english(text):
             "giant green snake"
     ]
     
-    return text
+    return eng

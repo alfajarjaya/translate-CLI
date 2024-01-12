@@ -1,5 +1,5 @@
 def indonesia(text):
-    indo=[
+    indo= [
 "kucing",
 "anjing",
 "sapi", 
@@ -77,4 +77,4 @@ def indonesia(text):
 "ulat daun",
 "udang"
             ]
-    return text
+    return indo

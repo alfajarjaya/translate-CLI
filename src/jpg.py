@@ -77,4 +77,4 @@ def jepang(text):
 "enokimushi",
 "ebi"
     ]
-    return text
+    return jpg
