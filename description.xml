@@ -1,0 +1,26 @@
+description for app
+
+folder ( db ) = database for main.py or database for application
+    file ./db/indonesia.py = database translate language :  - indo to indo
+                                                            - indo to english
+                                                            - indo to japanese
+
+    file ./db./inggris.py = database translate language :   - english to english
+                                                            - english to indo
+                                                            - japanese to indo
+
+    file ./db/jepang.py = database translate language :     - japanese to japanese
+                                                            - japanese to indo
+                                                            - japanese to english
+
+folder ( src ) = validate for controller.py in input ( word/kata )
+
+    file ./src/eng.py = validate english language
+    file ./src/ind.py = validate indonesian language
+    file ./src/jpg.py = validate japan language
+
+controller.py used controll to main.py
+
+you running to : main.py
+
+any questions ? call me [ https://bit.ly/MochammadAlfajjar ] or chat my telegram [ https://t.me/Njir_18 ]
