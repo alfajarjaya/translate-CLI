@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub File Downloader</title>
+    <style>
+
+        * {
+            font-size: 20px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to top, rgb(3, 21, 39), rgb(118, 148, 178));
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 1em;
+            background:linear-gradient(to bottom, rgb(0, 22, 78),#600000);
+            padding: 10px 50px;
+            color: #fff;
+        }
+
+        input {
+            font-size: 12px;
+            padding: 7px;
+        }
+
+        button {
+            background: #fff;
+            border: none;
+            padding: 5px 0px;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>GitHub File Downloader</h1>
+    
+        <label for="githubLink">GitHub File Link:</label>
+        <input type="text" id="githubLink" placeholder="Masukkan link GitHub file" />
+        <button onclick="downloadFile()">Download</button>
+    
+        <div id="notification"></div>
+    </div>
+
+    <script>
+        function downloadFile() {
+            var githubLink = document.getElementById('githubLink').value;
+            var notification = document.getElementById('notification');
+
+            if (!githubLink.includes('github.com')) {
+                notification.innerHTML = 'Mohon masukkan link GitHub yang valid.';
+                return;
+            }
+
+            var fileName = githubLink.split('/').pop();
+            
+            var rawGitHubUrl = 'https://raw.githubusercontent.com/' + githubLink.split('/')[3] + '/' + githubLink.split('/')[4] + '/main/';
+
+            var fileUrl = rawGitHubUrl + fileName;
+
+            var downloadLink = document.createElement('a');
+            downloadLink.href = fileUrl;
+            downloadLink.download = fileName;
+
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+
+            notification.innerHTML = 'File sedang diunduh.';
+
+            document.getElementById('githubLink').value = '';
+        }
+    </script>
+</body>
+</html>
