@@ -15,18 +15,21 @@ while True:
     
     if menu == "1":
         
-        translate = controller.kataIndonesia()
+        controller.kataIndonesia()
+        break
          
     elif menu == "2":
         
-        translate = controller.kataInggris()
+        controller.kataInggris()
+        break
         
     elif menu == "3":
         
-        translate = controller.kataJepang()
+        controller.kataJepang()
+        break
+        
     else:
         print("="*30)
         print("Pilihan tidak valid!")
         print("="*30)
-        continue
-    
+        continue 

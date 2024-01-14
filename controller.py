@@ -3,7 +3,7 @@ from src import ind,eng,jpg
     
 def kataIndonesia():
     
-    kata = input("Masukkan kata yang akan diterjemahkan: ")
+    kata = input("Masukkan kata yang akan diterjemahkan: ").lower()
     
     in_en = indonesia.indonesiaToEnglish(kata)
     in_jp = indonesia.indonesiaToJapan(kata)
@@ -55,7 +55,7 @@ def kataIndonesia():
             
 def kataInggris():
     
-    kata = input("Masukkan kata yang akan diterjemahkan: ")
+    kata = input("Masukkan kata yang akan diterjemahkan: ").lower()
     
     en_in = inggris.englishToIndonesia(kata)
     en_jp = inggris.englishToJapan(kata)
@@ -106,7 +106,7 @@ def kataInggris():
             
 def kataJepang():
     
-    kata = input("Masukkan kata yang akan diterjemahkan: ")
+    kata = input("Masukkan kata yang akan diterjemahkan: ").lower()
     
     jp_in = jepang.japanToIndonesia(kata)
     jp_en = jepang.japanToEnglish(kata)
@@ -119,7 +119,7 @@ def kataJepang():
             return
         else:
             print("="*50)
-            print(f"Bahasa yang dimasukkan : {kata}")
+            print(f"Kata yang dimasukkan : {kata}")
             print("="*50)
         
             print("""
@@ -153,5 +153,4 @@ def kataJepang():
                 break
             else:
                 print("Pilihan tidak valid!")
-                continue
-    
+                continue  
